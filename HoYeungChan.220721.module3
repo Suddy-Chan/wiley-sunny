@@ -1,0 +1,57 @@
+    1  cd ~
+    2  pwd
+    3  mkdir Algo1
+    4  cd Algo1
+    5  touch config bin logs scripts
+    6  cd config
+    7  ls
+    8  rm config bin
+    9  rm logs scrpits
+   10  remove scripts
+   11  rm scripts
+   12  ls
+   13  mkdir config bin logs scripts
+   14  ls
+   15  cd config
+   16  touch config.config variables
+   17  cd
+   18  cd Algo1
+   19  cd scripts
+   20  touch start.sh stop.sh admin.sh
+   21  cd ..
+   22  cd logs
+   23  cd today.log
+   24  touch today.log
+   25  cd ~
+   26  ls -R
+   27  cd rm
+   28  cd Algo1/config
+   29  rm variables
+   30  cd ..
+   31  rm bin
+   32  rmdir bin
+   33  cd logs
+   34  mkdir oldlogs
+   35  cd oldlogs
+   36  mkdir 2019 2018 2017
+   37  cd 2017
+   38  touch 2017.log
+   39  cd ..
+   40  dc 2018
+   41  cd 2018
+   42  2018.log
+   43  touch 2018.log
+   44  cd ..
+   45  cd 2019
+   46  touch 2019.log
+   47  cd ~
+   48  rm –r oldlogs
+   49  cd Algo1/logs
+   50  rm -r oldlogs
+   51  cd ~
+   52  find /home .sh
+   53  cd Algo1/scripts
+   54  rm s*.sh~
+   55  rm s*.sh
+   56  cd ~
+   57  history > HoYeungChan.220721.module3

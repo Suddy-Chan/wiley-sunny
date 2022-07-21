@@ -1,0 +1,37 @@
+    1  pwd
+    2  cd /var/log
+    3  cd...
+    4  cd..
+    5  cd ..
+    6  pwd
+    7  ls
+    8  ls -ltr
+    9  -ls -l
+   10  ls -l
+   11  ls -ltr
+   12  cd /
+   13  cd ~
+   14  cd ..
+   15  ls -help
+   16  ls --help
+   17  cd /var
+   18  man -ls
+   19  man ls
+   20  ls -r
+   21  ls -ltr
+   22  man ls
+   23  ls -s
+   24  man ls
+   25  ls -S
+   26  ls -ltr -S
+   27  ls -l
+   28  ls -l -S
+   29  man ls
+   30  ls -l -S -r
+   31  uname -a
+   32  history > HoYeungChan.220721.module2
+   33  history
+   34  sudo history > HoYeungChan.220721.module2
+   35  history
+   36  cd ~
+   37  history > HoYeungChan.220721.module2
