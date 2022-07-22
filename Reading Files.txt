@@ -1,0 +1,84 @@
+#Using the cat command, display the contents of the script you ran to the screen.
+cat fixlog20220722162411.log
+
+#Use the cat command to display the contents of the script you ran to the screen but with line numbers.
+cat -n fixlog20220722162411.log
+
+#Read the contents of the log file created using cat but direct it to a new file in your home directory named newlog.log
+cat fixlog20220722162411.log > newlog.log
+
+#Create a directory named logs
+mkdir logs
+
+#Move the newlog.log into the logs directory.
+mv newlog.log ./logs/
+
+#Cat the original log file you created again. This time, append its output to the newlog.log file you just moved.
+cat fixlog20220722162411.log >> ./logs/newlog.log
+
+#Create a soft link named Daily to your newlog.log file in the logs directory.
+ln -s ./logs/newlog.log Daily
+
+#Return to your home directory.
+cd ~
+
+#Cat the original fix log file created into a less so that you can browse the file.
+less fixlog20220722162411.log
+
+#Using the search function in less, look for any new order messages. (You may need to refer back to your fix training to look up the appropriate fix tag.)
+\39=0
+
+#Exit less and run a search using grep for all new order messages. Redirect the output to a file named newOrders.log in the logs directory.
+grep 39=0 fixlog20220722162411.log > ./logs/newOrders.log
+
+#Copy the newOrders.log file from the logs directory to your home directory.
+cp newOrders.log ~
+
+#Run a command to find out how many lines are in the newOrders.log file.
+grep -c ".*" newOrders.log
+
+#Run a command to pull out all of the messages with the instruction buy in fix (you may need to look up the tag again) from the original log file and put them into a new log file in the logs directory named buyMessages.log
+grep buy fixlog20220722162411.log > ./logs/buyMessages.log
+
+#Count how many lines are in that file.
+grep -c ".*" ./logs/buyMessages.log
+
+#Count how many new orders are in the buyMessages.log.
+grep -c 39=0 ./logs/buyMessages.log
+
+#Create a new version of the logfile named noNewOrders.log that has everything except new order messages in it and put it in the logs directory.
+grep -v 39=0 fixlog20220722162411.log > noNewOrders.log
+mv noNewOrders.log ./logs
+
+#Count how many words are in the noNewOrders.log.
+wc ./logs/noNewOrders.log
+
+#Show the last 5 lines of the noNewOrders.log to the screen.
+tail -n 5 noNewOrders.log
+
+#Find all the messages relating to Apple in the original log file and show the first two lines to the screen.
+grep Apple fixlog20220722162411.log | tail -n 2
+ 
+#Add a soft link named fix to your fixGenerator script.
+ln -s fixGenerator.sh fix
+
+#Tail the log file created looking for new orders only in your tail command. (This will not actually cause any updates to the screen because the log file is not currently being updated.)
+tail fixlog20220722162411.log
+
+#Create a new directory named superLogs
+mkdir superLogs
+
+#Copy everything in the logs directory into the superLogs directory.
+cp -R ./logs ./superLogs 
+
+#Run a single grep command with an option on grep to count the number of messages for FB in the original log file that was created.
+grep FB fixlog20220722162411.log
+
+#Count the number of words in the original logfile.
+wc fixlog20220722162411.log
+
+#Find the number of new order messages for Netflix in the original log file.
+grep -c NFLX fixlog20220722162411.log
+
+#Run the following command to put your results in the directory specified by your instructor.
+history > HoYeungChan.220722.module5
