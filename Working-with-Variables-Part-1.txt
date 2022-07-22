@@ -1,0 +1,44 @@
+#Create a variable named STOCK and assign it a value of AAPL
+STOCK=AAPL
+
+#Print the value of the variable out to the screen
+echo $STOCK
+
+#Change the value of the variable STOCK to be the previous value with _US appended onto the end
+STOCK=AAPL_US
+
+#Create a new variable named PRICE with value 290.84
+PRICE=290.84
+
+#Print out to the screen a sentence ‘The current price of is ’ where you call the variables and get their values
+echo "The current price of $STOCK is $PRICE"
+
+#Create a variable named WHOAMI and assign it your current username. Do this in one command.
+WHOAMI=`logname`
+
+#Using just $ and () assign a variable named SERVERTYPE by using the uname command
+SERVERTYPE=$(uname)
+
+#Write a command to show to the screen the value of running the command assigned to SERVERTYPE
+echo $SERVERTYPE
+
+#Assign a variable named CMD the command uname -i (not the value of running the command but the command itself)
+CMD="uname -i"
+
+#Using echo and the variable CMD, show how you echo the value of CMD (not execute the command)
+echo $CMD
+
+#Using echo and the variable CMD, print what the CMD returns when run to the screen
+echo `$CMD`
+
+#Change directory to your home directory
+cd ~
+
+#Create a directory named scripts
+mkdir scripts
+
+#Print out your $PATH Value
+echo $PATH
+
+#Append your newly created script directory to your path variable
+PATH=$PATH:/scripts/
