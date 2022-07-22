@@ -1,0 +1,65 @@
+Check you can see your new path appended to the end of the path variable
+echo $PATH
+
+If you have Algo1 still created from previous exercises, remove the directory structure and all files within it
+rm -r Algo1
+
+Make a directory named Payment1
+mkdir Payment1
+
+Within Payment1, make three directories named logs, configuration, and scripts
+cd Payment1
+mkdir logs configuration scripts
+
+Within scripts, create an empty file named start.sh
+cd scripts
+touch start.sh
+
+Within configuration, create an empty file named instance.properties
+cd ..
+cd configuration
+touch instance.properties
+
+Give everyone permission to read the instance.properties file, but assign write and execute permissons only to yourself
+chmod 744 instance.properties
+
+Set permissions on the file start.sh so that everyone can execute and so that the group and owner can read and write
+cd ..
+cd scripts
+chmod ug=rwx,o=x start.sh
+
+Direct the output of man cat into a file in your home directory named cat.output
+echo `man cat`>cat.output
+
+Change the permission of that file so everyone can read it but only the group can write and execute
+chmod g=rwx,u=r,o=r cat.output
+
+Go back to your home directory
+cd ~
+
+Prove your location
+pwd
+
+Remove the directory Payment1 along with all subdirectories
+rm -r Payment1
+
+Delete the cat.output file, but with a warning first to the user
+rm cat.output
+
+Create a directory named temp
+mkdir temp
+
+Set a variable named MYTEMP that references the new temp directory you just created
+MYTEMP=~/temp
+
+Run a command to see the value of the MYTEMP variable
+echo $MYTEMP
+
+Now set the value of $MYTEMP to nothing
+unset MYTEMP
+
+Remove the temp directory that you created
+rm -r temp
+
+Run the following command to store your results in the specified directory the trainer gave. Replace the name and date with the correct values:
+History > HoYeungChan.220722.module4
