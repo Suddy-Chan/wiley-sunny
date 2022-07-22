@@ -38,13 +38,13 @@ cp newOrders.log ~
 grep -c ".*" newOrders.log
 
 #Run a command to pull out all of the messages with the instruction buy in fix (you may need to look up the tag again) from the original log file and put them into a new log file in the logs directory named buyMessages.log
-grep buy fixlog20220722162411.log > ./logs/buyMessages.log
+grep 54=1 fixlog20220722162411.log > ./logs/buyMessages.log
 
 #Count how many lines are in that file.
 grep -c ".*" ./logs/buyMessages.log
 
 #Count how many new orders are in the buyMessages.log.
-grep -c 39=0 ./logs/buyMessages.log
+wc .*" ./logs/buyMessages.log
 
 #Create a new version of the logfile named noNewOrders.log that has everything except new order messages in it and put it in the logs directory.
 grep -v 39=0 fixlog20220722162411.log > noNewOrders.log
