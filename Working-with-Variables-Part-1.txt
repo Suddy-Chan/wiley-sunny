@@ -14,7 +14,7 @@ PRICE=290.84
 echo "The current price of $STOCK is $PRICE"
 
 #Create a variable named WHOAMI and assign it your current username. Do this in one command.
-WHOAMI=`logname`
+WHOAMI=$USER
 
 #Using just $ and () assign a variable named SERVERTYPE by using the uname command
 SERVERTYPE=$(uname)
