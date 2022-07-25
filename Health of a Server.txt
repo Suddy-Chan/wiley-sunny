@@ -1,0 +1,73 @@
+#Run a command to see all the processes running on the server owned by everyone.
+ps -ef
+
+#Confirm the username you are running as.
+echo $USER
+
+#Run a command to see all the processes running on the server and use grep to select only the processes your user is running.
+ps -ef|grep "ubuntu"
+
+#Repeat the previous exercise. This time, select every process except things running as you.
+./fixGenerator.sh &
+
+#Show the process info for our current session without using a grep command.
+ps -f 86
+
+#Show the process tree for the current session.
+ps -ef f
+
+#Run a process check on the server but only output the User, pid and cmd columns to your results.
+ps -eo user,pid,cmd
+
+#Run a process check to pull all of the process ids running on the server and put the output into a file named list in your home directory.
+ps -eo pid>~/list
+
+#Run the following series of commands:
+
+sleep 300 &
+#Find this command by checking the processes and running a grep
+ps -ef|grep "sleep"
+#Stop the process using the process id
+kill 41514
+
+#Run a command to see a dynamic view of all the processes running on your host.
+top
+
+#Now run the same command but specifically only for root.
+top|grep "root"
+
+#Experiment with the following commands while running top and note your observations:
+
+z:highlight running process in top
+c:show the absolute path of the processes
+Shift P: sort the processes by %CPU
+k: kill a process by process ID
+
+#Run a command to check network connectivity between your Linux session and yahoo.com.
+ping yahoo.com
+
+#show the network route between your session and yahoo.com and output the contents into a file named yahoo.route in your home directory.
+traceroute yahoo.com>~/yahoo.route
+
+#View the file using less and see how many hops it took to get there.
+less yahoo.route
+20 hops
+
+#Create a soft link named route to your network route.
+ln -s yahoo.route route
+
+#Run a command to see all the network sockets on your server and output to a file named output in your home directory.
+netstat>~/output
+
+#Create a folder named network in your home directory.
+mkdir network
+
+#Move your route file and network output file into the network folder you just created.
+mv route output ./network
+
+#Run the command to query your network interfaces on your session.
+ifconfig
+
+#Run the following command to put your results in the directory the trainer specified.
+
+History > HoYeungChan.220725.module6
