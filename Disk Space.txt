@@ -1,0 +1,64 @@
+#Run a command to see the disk usage across your file system.
+df
+
+#Run the command again. This time ensure the output is in human-readable format and added to a file named filesystem.usage in your home directory.
+df -h > ~/filesystem.usage
+
+#Show the disk usage for your home directory.
+du ~
+
+#Show the disk usage for your home directory in human-readable format and add it a file named disk.usage in your home directory.
+du ~ -h > ~/disk.usage
+
+#Run a disk check specifically showing output for all files and folders in human-readable format. Put the results into usage2 in your home directory.
+du -sh > ~/usage2
+
+#Show the disk usage for everything in /var.
+du /var
+
+#Run a disk usage command on your home directory that will follow any links if you have them set up and display the output in human-readable format.
+du ~ -Lh
+
+#Create a folder named disk in your home directory.
+mkdir disk
+
+#Copy your output files from exercise 2, exercise 4, and exercise 5 into this folder.
+cp output ~/disk
+
+#Move into the disk folder.
+cd disk
+
+#Run a command to create an archive tar file named disk.tar that includes everything in this folder.
+tar -cvf disk.tar *
+
+#Reverse the previous command and undo the archive.
+tar -xvf disk.tar
+
+#Now run an archive of these files to ensure it creates a g-zipped tarball named disk.tar.gz in a single-line command.
+tar -cvf disk.tar.gz *
+
+#Create an empty file named newdisk in this directory.
+touch newdisk
+
+#Uncompress the gz file you created so that it is back to being just a tar file.
+tar -xvf disk.tar.gz
+
+#Add the newdisk file to the tar file.
+tar -rvf disk.tar newdisk
+
+#Compress the tar file again to make a g-zipped tarball again.
+tar -cvf disk.tar.gz disk.tar 
+
+#Create another directory named disk_output in your home directory.
+cd ~
+mkdir disk_output
+
+#Uncompress your tarball to the directory you just created.
+tar -xvf ./disk/disk.tar.gz -C ~/disk_output
+
+#Go back to your home directory and run a command to g-zip your disk_output directory. Ensure it recursively compresses everything.
+cd ~
+gzip -r disk_output
+
+#Run the following command to put your results in the directory specified by your instructor.
+history > HoYeungChan.220725.module7
