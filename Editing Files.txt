@@ -16,6 +16,7 @@ word count 98
 
 #Copy the first line of the file and paste it after your word count entry at the bottom of the file.
 yy
+p
 
 #Delete the first line of the file.
 dd
