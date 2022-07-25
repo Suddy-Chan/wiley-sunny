@@ -39,7 +39,7 @@ wc -l avengers
 #Write the number of lines into the file one line above the word count with the text "line count" plus the value.
 vi avengers
 i
-line count 4
+line count 5
 
 #Delete "Good luck" wherever it occurs in the file.
 :%s/Good luck//g        
