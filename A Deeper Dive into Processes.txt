@@ -29,6 +29,7 @@ grep -v "35=0" fixlog20220726114856.log > ~/fixlog.log
 
 #Using the || command, run a search in this new file for new order messages or for execution messages (35=8).
 grep 35=0 fixlog.log || grep 35=8 fixlog.log
+
 #Run the watch command on the date to see it work.
 watch date
 
