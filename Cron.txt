@@ -56,7 +56,7 @@ vi seq3.txt
 Nice to meet you.
 
 #Generate a list of these files and add the list to another file named list.txt.
-cat seq1.txt seq2.txt seq3.txt > list.txt
+ls seq* > list.txt
 
 #Use a single command to copy the contents of all files with seq in the name into a file named total.txt.
 cat seq* > total.txt
