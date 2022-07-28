@@ -1,0 +1,95 @@
+Part 1 cron
+
+In these exercises, we will practice writing some cron jobs, using the fixGenerator script as the command to execute.
+
+Ensure the fixGenerator.sh script is installed in your home directory.
+
+#Set up the script to run Monday-Friday at 6am.
+0 6 * * 1-5 /home/ubuntu/fixGenerator.sh 
+
+#Set up the script to run at 6pm every Friday.
+0 18 * * 5 /home/ubuntu/fixGenerator.sh 
+
+#Set up the script to run every half hour from 9-4 on Monday, Wednesday and Friday.
+*/30 9-16 * * 1,3,5 /home/ubuntu/fixGenerator.sh
+
+#Set up the script to run every other hour every day.
+0 */2 * * * /home/ubuntu/fixGenerator.sh
+
+#Set up the script to run on May 4th at midday.
+0 12 4 5 * /home/ubuntu/fixGenerator.sh 
+
+#Set up the script to run on the 1st of every month at 625am.
+25 6 1 * * /home/ubuntu/fixGenerator.sh 
+
+#Set up the script to run every 20 minutes every Tuesday between 10am and 2pm.
+*/20 10-14 * * 2 /home/ubuntu/fixGenerator.sh
+
+#Set up the script to run the 1st of every other month on the hour.
+0 * 1 */2 * /home/ubuntu/fixGenerator.sh
+
+#Set up the script to run at 6am and 8am on Saturday and Sunday.
+0 6,8 * * 6,7 /home/ubuntu/fixGenerator.sh
+
+#Copy the contents of your crontab into a file named crontab.yourname.module13 and place the file in the directory specified by your instructor.
+crontab -l > crontab.HoYeungChan.module13
+
+Part 2 Review Exercises
+
+#For the following exercises, create a file named module13.name.answers in the directory specified by your instructor. Put the commands you use in this file. 
+touch module13.HoYeungChan.answers 
+
+Working with Files
+#Create a file named seq1.txt and write a sentence of your choice in it.
+touch seq1.txt
+vi seq1.txt
+Hello world.
+
+#Create a file named seq2.txt and write a sentence of your choice in it.
+touch seq2.txt
+vi seq2.txt
+I am Sunny.
+
+#Create a file named seq3.txt and write a sentence of your choice in it.
+touch seq3.txt
+vi seq3.txt
+Nice to meet you.
+
+#Generate a list of these files and add the list to another file named list.txt.
+cat seq1.txt seq2.txt seq3.txt > list.txt
+
+#Use a single command to copy the contents of all files with seq in the name into a file named total.txt.
+cat seq* > total.txt
+
+#Write a single command that shows how many files you have in your current directory.
+ls | wc -l
+
+Working with Text
+For the following activities, start by putting the following text into a file named LOTR.txt. Use the new file to complete the exercises.
+touch LOTR.txt
+
+#Do a case-insensitive search of the file for hobbit and output the results to the screen.
+grep hobbit LOTR.txt
+
+#Put the first eight lines and the last three lines into a new file named LOTRtxt.
+head -n 8 LOTR.txt > LOTRtxt
+tail -n 3 LOTR.txt >> LOTRtxt
+
+#Run a command on the command line to replace all occurrences of Gollum with Thanos and output the results into a new file named LOTRMarvel.txt.
+sed 's/Gollum/Thanos/g' LOTR.txt > LOTRMarvel.txt
+
+#On the command line, run a command to compare the LOTR.txt with LOTRMarvel.txt.
+diff LOTR.txt LOTRMarvel.txt
+
+#Change the permission on LOTR.txt so that it is read and executable for others and group, and fully accessible for the current user.
+chmod u=rwx,og=rx LOTR.txt
+
+#Count the number of words in LOTR.txt.
+wc -w LOTR.txt
+(473 words)
+
+#Rename the LOTR.txt file to LordOfTheRings.txt.
+mv LOTR.txt LordOfTheRings.txt
+
+#Create a compressed tarball named LOTR.tar.gz that includes all the files you have created in this set of exercises.
+tar -cvzf LOTR.tar.gz LOTRtxt LOTRMarvel.txt LordOfTheRings.txt
