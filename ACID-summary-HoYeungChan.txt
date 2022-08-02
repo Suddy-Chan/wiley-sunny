@@ -1,0 +1,50 @@
+Summary on ACID properties
+
+- ACID properties are the principles that databases can follow, but not mandatory. However, databases that do not follow ACID properties are risky, 
+  especially for those in banking and medical system.
+
+Transaction
+- A transaction is a series of actions which has to be executed fully but not partially, aka 'all or nothing'.
+
+Atomicity
+- Atomicity means a transaction is fully executed or is not executed, and it should not partially succeeds.
+
+Consistensy
+- Consistense means a transaction alters the database from one valid state to another valid state, 
+  and the database imposes constraints on the types and sizes of data.
+
+- Another meaning is for primary and foreign key relationships. 
+  First, each record should have exacly one primary key, and each table should not have duplicate primary key.
+  Then, most DBMS systems forbid you to orphan a row, which means a foreign key does not match the primary key in related tables.
+  One solution is cascade delete, which is an automation that delects the records with foreign keys first before deleting the record with primary key.
+
+Isolation
+- Isolation means a transaction cannot affect another transaction until it is complete. 
+  Examples of isolations:
+  - Serializable: When person A is changing the data in a table, the data is locked until the transaction is complete. 
+                  Then person B can only read the data after person A's transaction is committed.
+  - Read Uncommitted: Person B can read the data whether person A is changing the data that haven't been committed yet.
+                      This is called dirty read, as As transaction could fail and roll back. 
+
+Durability
+- Durablity means a transaction will remain in the database once it is committed. If the server is out, it is still there.
+  It is not fully committed until it is written to permanent storage.
+
+Databases and Log Files
+- For a database, a transaction log is a history of executed actions. 
+  It ensures that the database can be recovered from the log in case there are crashes or hardware fails.
+
+- The log file is physically separate from the real database data, ensuring consistensy of the database.
+  If the DBMS finds some errors in an uncommitted transaction from a log file, 
+  it will undo the actions performed and restore the database to its previous valid state. 
+
+Backup Strategies
+- Both data and log files should have backup and recovery options.
+  Full data backups are very large and only done periodically, whereas log backups are much smaller.
+
+- Solution 1: nightly data backup and a log backup every 10 minutes
+  May still have changes loss but still can recover most changes. 
+
+- Solution 2: use multiple database servers and execute transactions on a on each (database cluster).
+  But the cost of servers and software increases exponentially.
+ 
