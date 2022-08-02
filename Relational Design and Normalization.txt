@@ -1,0 +1,59 @@
+Normalization
+- Normalization means breaking down a relational database into simpler structures.
+- Its prupose is to reduce data redundancy
+
+Data Redundancy
+- Data redundancy means storing the data multiple times in a database.
+- It will occupy the disk space by storing many copies of the same data
+- It also leads to data anomalies, which means inconsistent or incorrect data
+
+Anomaly caused by data redundancy
+- Update anomaly: when you update a table/database, you would miss a row or misspell the data in at least one row, 
+  casuing most of the rows containing the right data and a few with the wrong data.
+- Insert anomaly: when you want to add data into a table/database, you cannot do it due to the absence of other data.
+- Delete anomaly: when you delete some data, you may cause other data in the table/database to disappear.
+
+Functional Dependencies
+- If column A is functionally dependent on column B, then we can identify the data in column A based on column B.
+  But the converse may not be ture.
+
+- In a well-designed table, all columns will depend on at least one column in the table. 
+  Columns that are independent of the others may have to be moved to a separate table.
+
+Normalization Process
+- Normal forms are sequences of rules applied to normalize a database.
+- Each normal forms build on top of the previous normal forms.
+- They are to prevent anomalies by removing the structural issues that can lead to them.
+- The normalization process starts from a table called heap, which is unstructured and has no constraints imposed by any normal form.
+
+First Normal Form (1NF)
+Following conditons have to be satisfied for 1NF:
+- No top-to-bottom ordering to the rows and no left-to-right ordering to the columns.
+    - The data in a table can be accessed in any order.
+- Every Row Can Be Uniquely Identified.
+    - These is a unique key (primary key) for each entity. 
+-  Every Field Contains Only One Value
+    - Prevent multiple values in one cell
+
+Second Normal Form (2NF)
+- A table is in 2NF if and only if it is in 1NF and every non-primary-key column is functionally dependent on the entire primary key 
+  but not functionally dependent on any proper subset of the primary key.
+- That means the table is in 1NF and all columns except the primary key need to be strictly related to each other.
+- To achieve 2NF, split our data into multiple tables so that column A is referenced by a foreign key to column B in another table.
+
+Third Normal Form (3NF)
+- A table is in 3NF if and only if it is in 2NF and no non-primary-key column is transitively dependent on the primary key.
+- If column A depends on PK (primary key), column B depends on PK, and A also relies on B, then A relies on PK through B.
+    - We can say A is transitively dependent on PK.
+
+Denormalization
+- In practical, we do not take normalization as far as we can 
+- 3NF adds an additional table and more constraints
+    - It takes more time to process and add complexity to your model
+- When optimizing for extreme performance, we are less concerned with data protection 
+   and choose to move back towards 1NF. This is called denormalization. 
+- One approah is to periodically poll the database for changes and move the changed data into a denormalized structure, 
+  and do any known calculations in advance.
+    - When a user requests the reports, they can use this pre-optimized data to provide a quick response.
+
+

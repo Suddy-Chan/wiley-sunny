@@ -1,0 +1,25 @@
+Entity Relationship Diagrams (ERD)
+- ERD is a visual representation of the database structure.
+- Usally created after the normalization process.
+
+Advantages of using ERD
+- Helps identify places where the proposed structure may not work.
+- Allows the team to see the database's structure.
+- Gives you a condensed representation of the database's structure.
+    - Helps you write SQL statements more quickly.
+
+ERD Components
+- Tables: represented by a rectangle, normally divided into three sections horizontally
+    - Names of the table, primary key field(s) and remaining fields
+- Metadata of fields: tells us which fields are nullable and what data type each field will use.
+- Keys:  indicate the primary and foreign keys 
+     - add PK and FK to the left of the appropriate field names in the table
+- Relationships: use an arrow that points FROM the one side of the relationship TO the many side of the relationship
+    - Crow's foot marking: three small lines to indicate many relationship
+    - Small vertical line: indicate that each record in table A must have at least one related record in table B
+
+Many-to-Many Relationships
+- To visualize many-to-many Relationships in ERD, it is split into two one-to-many relationships represented by three tables
+    - two original tables and a bridge table
+    - the primary key fields of the original tables are used to create the primary key of the bridge table
+- 
