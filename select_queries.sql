@@ -52,7 +52,7 @@ WHERE BirthDate >= '1980-1-1' AND BirthDate < '1990-1-1';
 -- Write the query above in a different way.
 SELECT FirstName, LastName, BirthDate
 FROM client
-WHERE BirthDate BETWEEN '1980-1-1' AND '1990-1-1';
+WHERE BirthDate BETWEEN '1980-1-1' AND '1989-12-31';
 
 -- Activity 11
 -- How many rows in the Login table have a .gov EmailAddress? (17 rows)
