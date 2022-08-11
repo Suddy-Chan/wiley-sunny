@@ -1,0 +1,33 @@
+Object-oriented programming (OOP)
+- a programming paradigm that relies on the concept of classes and objects
+- Objects are instances of classes
+- Objects contains data in the form of fields, which are often known as attributes or properties, 
+  and code in the form of procedures, which are often known as methods)
+- Object-oriented languages include : Java, C++, Python, R, JavaScript
+
+Classes and objects
+- Classes: definitions for the data format and procedures for a given type or class of object
+- Objects: instances of classes, having the structure given be classes
+
+Inheritance
+- Inheritance: basing an object or class upon another object (prototype-based inheritance) or class (class-based inheritance)
+- a subclass re-uses code in a base class by implementation inheritance
+
+Example of classes and objects in Python
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+
+p1 = Person("John", 36)
+p1.myfunc()
+
+The code above create a class called Person. 
+The __init__ function is used to assign values for name and age.
+myfunc function is a method in the Person class that print out a greeting phase with the name of the object.
+p1 = Person("John", 36) creates an object called p1 that has name John and age 36.
+p1.myfunc() calls the method that print out Hello my name is John.
