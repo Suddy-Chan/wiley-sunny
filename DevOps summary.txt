@@ -1,0 +1,28 @@
+DevOps
+- DevOps is a set of practices that provide a common language for software developers (Dev) and IT operations (Ops). 
+- Dev and Ops are at the same team and work together
+- It ensures quicker changes, embraces risk, provides stability and reliability
+
+Three Distinct Aspects of DevOps
+1. The principle of flow
+2. The principle of feedback
+3. The principle of continuous learning and experimentation
+
+Five Phases of Agile
+1. Forming
+2. Storming
+3. Norming
+4. Performing
+5. Adjourning
+
+Environments
+- separation of work areas
+- different roles have separate environments: Dev Test Staging Production
+
+Pipelines
+- ensures the contiuous Build, Test, Package, Deployment, Validation of application and environment
+
+Containers
+- Package everything needed into one atomic component
+- consists of layers
+- reduce dependency hell
