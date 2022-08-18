@@ -1,0 +1,19 @@
+Team 3
+1. Manage user permissions like pull push
+- Go to "Settings --> "Collaborators" --> "Add People"
+
+2. Create individual branches to the repo
+- each of us create a branch
+- total 3 branches: songjiaze,syahirah,sunny
+
+3. Take a main branch and commit at the same time
+- create README.md file on repo
+- pull it and edit it in local repo
+- push to main branch
+- pull again and edit
+- push to main branch to amend
+
+4. Create pull request
+- push our own files to the individual branches
+- create pull request to merge with main branch
+- commit merge

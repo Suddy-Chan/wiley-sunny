@@ -1,0 +1,67 @@
+Started by user admin
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/wiley
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/wiley/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Suddy-Chan/wiley-sunny # timeout=10
+Fetching upstream changes from https://github.com/Suddy-Chan/wiley-sunny
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Suddy-Chan/wiley-sunny +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision b96701727255fe8f75a1669763528a96186c8bf6 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b96701727255fe8f75a1669763528a96186c8bf6 # timeout=10
+Commit message: "DevOps summary"
+ > git rev-list --no-walk b96701727255fe8f75a1669763528a96186c8bf6 # timeout=10
+[Checks API] No suitable checks publisher found.
+[wiley] $ /bin/sh -xe /tmp/jenkins2202812690006513498.sh
++ ls -l
+total 120
+-rw-r--r-- 1 jenkins jenkins 1649 Aug 18 04:10 A Deeper Dive into Processes.txt
+-rw-r--r-- 1 jenkins jenkins 2850 Aug 18 04:10 ACID-summary-HoYeungChan.txt
+-rw-r--r-- 1 jenkins jenkins 2817 Aug 18 04:10 Advanced Command.txt
+-rw-r--r-- 1 jenkins jenkins 1041 Aug 18 04:10 Basic Commands to Survive.txt
+-rw-r--r-- 1 jenkins jenkins 3481 Aug 18 04:10 Cron.txt
+-rw-r--r-- 1 jenkins jenkins 1664 Aug 18 04:10 DDL_answer.sql
+-rw-r--r-- 1 jenkins jenkins  828 Aug 18 04:10 DevOps summary.txt
+-rw-r--r-- 1 jenkins jenkins 2189 Aug 18 04:10 Disk Space.txt
+-rw-r--r-- 1 jenkins jenkins 2285 Aug 18 04:10 Editing Files.txt
+-rw-r--r-- 1 jenkins jenkins 1413 Aug 18 04:10 Entity Relationship Diagrams.txt
+-rw-r--r-- 1 jenkins jenkins 1945 Aug 18 04:10 Files and Filesystem.txt
+-rw-r--r-- 1 jenkins jenkins 2383 Aug 18 04:10 Health of a Server.txt
+-rw-r--r-- 1 jenkins jenkins  617 Aug 18 04:10 HoYeungChan.220721.module2
+-rw-r--r-- 1 jenkins jenkins 1070 Aug 18 04:10 HoYeungChan.220721.module3
+drwxr-xr-x 2 jenkins jenkins 4096 Aug 18 04:10 Python
+-rw-r--r-- 1 jenkins jenkins 3460 Aug 18 04:10 Reading Files.txt
+-rw-r--r-- 1 jenkins jenkins 3406 Aug 18 04:10 Relational Design and Normalization.txt
+drwxr-xr-x 2 jenkins jenkins 4096 Aug 18 04:10 SQL Final
+-rw-r--r-- 1 jenkins jenkins 1449 Aug 18 04:10 Useful Scripting Tools and Linux Commands.txt
+-rw-r--r-- 1 jenkins jenkins 1357 Aug 18 04:10 Working-with-Variables-Part-1.txt
+-rw-r--r-- 1 jenkins jenkins 1849 Aug 18 04:10 Working-with-Variables-Part-2-FilePremission.txt
+-rw-r--r-- 1 jenkins jenkins 6375 Aug 18 04:10 aggregate-exercises-ans.sql
+-rw-r--r-- 1 jenkins jenkins   35 Aug 18 04:10 diskspace.sh
+-rw-r--r-- 1 jenkins jenkins   55 Aug 18 04:10 hello.sh
+-rw-r--r-- 1 jenkins jenkins 6796 Aug 18 04:10 join-exercises-ans.sql
+-rw-r--r-- 1 jenkins jenkins  636 Aug 18 04:10 manytomany.sql
+-rw-r--r-- 1 jenkins jenkins  617 Aug 18 04:10 newfile
+-rw-r--r-- 1 jenkins jenkins 3886 Aug 18 04:10 select_queries.sql
+[wiley] $ /bin/sh -xe /tmp/jenkins6588706339361591251.sh
++ python3 /var/lib/jenkins/workspace/wiley/Python/Assignment Text Count Analysis Full.py
+imagine a vast sheet of paper on which straight lines, triangles, squares, pentagons, hexagons, and other figures, 
+instead of remaining fixed in their places, move freely about, on or in the surface, 
+but without the power of rising above or sinking below it, very much like shadows - only hard and with luminous edges - 
+and you will then have a pretty correct notion of my country and countrymen. alas, a few years ago, 
+i should have said "my universe": but now my mind has been opened to higher views of things.
+['imagine', 'a', 'vast', 'sheet', 'of', 'paper', 'on', 'which', 'straight', 'lines,', 'triangles,', 'squares,', 'pentagons,', 'hexagons,', 'and', 'other', 'figures,', 'instead', 'of', 'remaining', 'fixed', 'in', 'their', 'places,', 'move', 'freely', 'about,', 'on', 'or', 'in', 'the', 'surface,', 'but', 'without', 'the', 'power', 'of', 'rising', 'above', 'or', 'sinking', 'below', 'it,', 'very', 'much', 'like', 'shadows', '-', 'only', 'hard', 'and', 'with', 'luminous', 'edges', '-', 'and', 'you', 'will', 'then', 'have', 'a', 'pretty', 'correct', 'notion', 'of', 'my', 'country', 'and', 'countrymen.', 'alas,', 'a', 'few', 'years', 'ago,', 'i', 'should', 'have', 'said', '"my', 'universe":', 'but', 'now', 'my', 'mind', 'has', 'been', 'opened', 'to', 'higher', 'views', 'of', 'things.']
+['imagine', 'a', 'vast', 'sheet', 'of', 'paper', 'on', 'which', 'straight', 'lines,', 'triangles,', 'squares,', 'pentagons,', 'hexagons,', 'and', 'other', 'figures,', 'instead', 'of', 'remaining', 'fixed', 'in', 'their', 'places,', 'move', 'freely', 'about,', 'on', 'or', 'in', 'the', 'surface,', 'but', 'without', 'the', 'power', 'of', 'rising', 'above', 'or', 'sinking', 'below', 'it,', 'very', 'much', 'like', 'shadows', '-', 'only', 'hard', 'and', 'with', 'luminous', 'edges', '-', 'and', 'you', 'will', 'then', 'have', 'a', 'pretty', 'correct', 'notion', 'of', 'my', 'country', 'and', 'countrymen.', 'alas,', 'a', 'few', 'years', 'ago,', 'i', 'should', 'have', 'said', '"my', 'universe":', 'but', 'now', 'my', 'mind', 'has', 'been', 'opened', 'to', 'higher', 'views', 'of', 'things.']
+['imagine', 'a', 'vast', 'sheet', 'of', 'paper', 'on', 'which', 'straight', 'lines', 'triangles', 'squares', 'pentagons', 'hexagons', 'and', 'other', 'figures', 'instead', 'of', 'remaining', 'fixed', 'in', 'their', 'places', 'move', 'freely', 'about', 'on', 'or', 'in', 'the', 'surface', 'but', 'without', 'the', 'power', 'of', 'rising', 'above', 'or', 'sinking', 'below', 'it', 'very', 'much', 'like', 'shadows', '-', 'only', 'hard', 'and', 'with', 'luminous', 'edges', '-', 'and', 'you', 'will', 'then', 'have', 'a', 'pretty', 'correct', 'notion', 'of', 'my', 'country', 'and', 'countrymen', 'alas', 'a', 'few', 'years', 'ago', 'i', 'should', 'have', 'said', 'my', 'universe', 'but', 'now', 'my', 'mind', 'has', 'been', 'opened', 'to', 'higher', 'views', 'of', 'things']
+Number of words is 92
+Number of distinct words is 74
+Original word counts: {'imagine': 1, 'a': 3, 'vast': 1, 'sheet': 1, 'of': 5, 'paper': 1, 'on': 2, 'which': 1, 'straight': 1, 'lines,': 1, 'triangles,': 1, 'squares,': 1, 'pentagons,': 1, 'hexagons,': 1, 'and': 4, 'other': 1, 'figures,': 1, 'instead': 1, 'remaining': 1, 'fixed': 1, 'in': 2, 'their': 1, 'places,': 1, 'move': 1, 'freely': 1, 'about,': 1, 'or': 2, 'the': 2, 'surface,': 1, 'but': 2, 'without': 1, 'power': 1, 'rising': 1, 'above': 1, 'sinking': 1, 'below': 1, 'it,': 1, 'very': 1, 'much': 1, 'like': 1, 'shadows': 1, '-': 2, 'only': 1, 'hard': 1, 'with': 1, 'luminous': 1, 'edges': 1, 'you': 1, 'will': 1, 'then': 1, 'have': 2, 'pretty': 1, 'correct': 1, 'notion': 1, 'my': 2, 'country': 1, 'countrymen.': 1, 'alas,': 1, 'few': 1, 'years': 1, 'ago,': 1, 'i': 1, 'should': 1, 'said': 1, '"my': 1, 'universe":': 1, 'now': 1, 'mind': 1, 'has': 1, 'been': 1, 'opened': 1, 'to': 1, 'higher': 1, 'views': 1, 'things.': 1}
+Number of distinct words in the orignial string is 75
+[Checks API] No suitable checks publisher found.
+Finished: SUCCESS

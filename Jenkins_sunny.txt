@@ -1,0 +1,19 @@
+CI/CD
+- set of practices in software engineering
+- Continuous integration (CI) and continuous delivery/continuous deployment (CD)
+- Continuous integration: Frequent merging of small changes into a main branch
+- Continuous delivery: When teams produce software in short cycles with high speed and frequency so that reliable software can be released at any time, 
+  and with a simple and repeatable deployment process when deciding to deploy
+- Continuous deployment: When new software functionality is rolled out completely automatically
+
+Jenkins
+- automation server for the continuous integration (CI) cycle initially
+- can cross the entire SDLC, including deployment
+- can run almost anything except graphical services
+
+Pipelines
+- From development to production:
+  Code commit, Build, Test, Release, Deploy/Deliver
+- Jenkins uses Groovy language to code pipelines
+- Requires Pipeline plugin and dependencies to be installed
+- Blue Ocean plugin can be used for autodetection in a Git repository

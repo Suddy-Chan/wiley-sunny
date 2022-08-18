@@ -1,0 +1,28 @@
+Git
+- is free and open source software for distributed version control
+
+Commands 
+git clone:  Clone a repository into a new directory
+git add .: Add file in the directory to the index (staging)
+git commit -m: Record changes to the repository, -m means message
+git push: Push your changes to the central repository
+git pull: Fetch from and integrate with another repository or a local branch
+git fetch: Download objects and refs from another repository
+
+Branching
+git branch: Check which branch we are on
+git checkout: Change branch
+git checkout -b: Create a branch
+git merge main: Update our branch to include the updates in main
+
+GitHub
+Branches: allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository
+Tags: mark an individual point in your repository's history, including a version number for a release
+Go to file: navigate to a file in the repo
+Add file - Create new file: Create new file in the repo
+         - Upload files: Upload files from local computer to the repo
+Code: gives an URL for you to clone the repo
+Pin: pin the repo to your profile
+Unwatch: notifications on the repo
+Fork: copy the repo
+Star: save the repo
