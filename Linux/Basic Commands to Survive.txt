@@ -1,0 +1,44 @@
+#Run a command to find your current location on the server
+pwd
+
+#Change directory from your current location to /var/log
+cd /var/log
+
+#Go back up a directory
+cd ..
+
+#Find your current location again
+pwd
+
+#List all the files in the current directory
+ls
+
+#Now list all the files with the long listing
+ls -l
+
+#Now list all the files with the long listing in reverse order, with the newest appearing at the bottom of your screen
+ls -ltr
+
+#Change to root directory
+cd /
+
+#Change back to your home directory
+cd ~
+
+#Go up a level in directory structure
+cd ..
+
+#Find out more information about the ls command
+ls --help
+
+#Go back to /var
+cd /var
+
+#Show the contents of this directory with details reverse sorted by size (you may have to use man to help)
+ls -l -S -r
+
+#Find out the hardware version you are running
+uname -a
+
+#Run the following command to store your results in the directory that the trainer has provided – substitute your name and the date in your file
+history > HoYeungChan.220721.module2
