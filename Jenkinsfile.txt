@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+                sh 'python3 --version'
+
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                sh 'python3 /var/lib/jenkins/workspace/wiley/Python/"Assignment Text Count Analysis Full.py"'
+            }
+        }
+    }
+}
