@@ -1,0 +1,56 @@
+Alerts
+- automation way to draw our attention to an issue
+- when something bad has happened (e.g. system not responding, write to log files fail, API fail)
+- can perform pre-emptive alerts when something is nearing critical to allow time to prepare and respond
+
+Who and when to alert
+- need to hit the right people
+- only when something need human intervention
+- right time zone(s), right person(s) on calls, right team
+
+Alert catagories
+For proportional responses:
+- hardware have different response rates to unresponsive application
+- disk fail will eventually need replacing
+- DNS change make the application unreachable -> immediate impact to company revenue
+
+Severity levels (Thresholds)
+- disk usage: 80%
+- CPU usage: 90%
+- number of failed requests to API: 10 per hour
+
+Types of alerts to different teams
+- Platform: hardware resources and failure
+- Networking: bandwidth, routing, firewalls, load balancing
+- Devolopers and DevOps: application, pipeline and development
+- Product owners: missing customer targets
+
+Alert supression
+- Automated + Manual: coded to prevent noise, snoozed by user resolving the issue
+- Avoid unneccessay noise: 
+- Alert once for all nodes having high rate of same issue
+- Lift supression when event is over -> set severity to OK
+- Unsnoozed when ticket is complete and service is resumed
+
+Traditonal vs SRE Alerting
+Traditional: what is wrong, thresholds, defined values, some automation, tangible assets
+SRE: hit rate, response time, causes of slowness, user experience, meeting aggrements, based on SLOs
+
+SRE alerts strategies
+Precision: 100% if every alert corresponds to a significant event
+Recall: 100% if every significant event corresponds to an alert
+Detection time: time take to send notifications in various conditions
+Reset time: time that alerts fire after an issue is resolved
+
+Reducing toil
+- only send alert when human intervention is needed
+- configure alerting with automated responses
+- reduce alerts through fixes in program/external agent scripts
+- significant event alerting
+- alerting against SLOs burn rate changes the way we alert
+
+Scaling of alerts
+- the window size should meet SLOs
+- proportion the window size to meet increase of demand
+- have similar services but not different services
+- group the alerts
